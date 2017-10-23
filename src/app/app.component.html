@@ -1,0 +1,21 @@
+
+
+<div class="container">
+ <id [user]="selectedUser"></id>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tr *ngFor= "let content of data; let i = index">
+      <td>{{content.id}}</td>
+      <td>{{content.title}}</td>
+      <td>{{content.body}}</td>
+      <td *ngIf="content.id" ><button (click)="onSelect(content)" class="btn-primary">Edit</button></td>
+      <td *ngIf="content.id" ><button (click)="deleteUser(i)" class="btn-danger">Delete</button></td>
+    </tr>
+  </table>
+</div>

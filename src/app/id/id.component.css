@@ -1,0 +1,6 @@
+.panel-default{
+    position: fixed;
+    width: 92%;
+    text-align: center;
+    background-color: darkgray;
+}
